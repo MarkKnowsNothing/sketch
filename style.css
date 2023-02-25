@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa; 
+    border-radius: .1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;   
+}
+
+::selection {
+    background: #666;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'VT323', monospace;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) no-repeat fixed, url("./images/bg.png") no-repeat center center fixed;
+    background-size: cover;
+    overflow: overlay;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+}
+
+h1, h3 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+p {
+    font-size: 24px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}
+
+.main__canva {
+    width: 80vh;
+    background-color: #ddd;
+    margin: 2rem;
+    padding: 2.5rem;
+    border-radius: .5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main__canva-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__canva-wrap.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+label {
+    display: block;
+    margin: -.25rem 0 .25rem 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+input[type='range'] {
+    user-select: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ddd;
+}
+  
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    background: #ddd;
+}
+  
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-top: -.25rem;
+    background: #333;
+    cursor: pointer;
+}
+
+#range-value {
+    font-size: 22px;
+    text-align: center;
+}
+
+button {
+    background-color: #ddd;
+    width: 5rem;
+    height: 2.5rem;
+    border: 1px solid #000;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 4rem;
+    height: 2.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 1px solid #000;
+    border-radius: .25rem;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: 1px solid #000;
+    border-radius: .25rem;
+}
+
+.main__canva-container {
+    box-shadow: 3px 3px 10px #aaa;
+}
+
+#container {
+    width: 24rem;
+    height: 24rem;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: auto auto;
+}
+
+#container > div {
+    user-select: none;
+    background-color: #fff;
+}
+
+footer {
+    width: 100%;
+    padding: 1rem;
+
+    color: #f9faf8;
+    text-align: center;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer p a {
+    color: #f9faf8;
+    text-decoration: underline;
+    transition: .25s ease-in-out;
+}
+
+footer p a:hover {
+    color: #e5e7eb;
+}
